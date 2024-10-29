@@ -14,7 +14,7 @@
 }
 
 body{
-    background-color: #003300;
+    background-color: whitesmoke;
 }
 
 a:hover {
@@ -33,7 +33,7 @@ body, html {
     top: 5%; /* Adjust as needed */
     left: 2%; /* Center horizontally */
     transform: translate(0%, 0%); /* Center adjustment */
-    width: 300px; /* Adjust width */
+    width: auto;
     height: auto; /* Maintain aspect ratio */
     z-index: 4; /* Ensure it's above the background */
     cursor: pointer; /* Changes cursor to indicate it's clickable */
@@ -71,6 +71,7 @@ header {
   font-weight: 400;            /* <weight>: Use a value from 400 to 900 */
   font-style: normal;
 }
+
 
 nav ul {
     list-style: none;
@@ -124,6 +125,7 @@ a:hover {
 }
 
 footer {
+    position: fixed;
     background-color: #f1f1f1;
     text-align: left;
     padding: 20px;
@@ -131,6 +133,7 @@ footer {
     bottom: 0;
     width: 100%;
     font-size: 0.9em;
+    color:white;
 }
 
 
@@ -158,6 +161,8 @@ p {
     position: relative;
     font-size: 25px; /* Adjust paragraph size */
     line-height: 1.5; /* Improve readability */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
 }
 
 .content-news{
@@ -182,14 +187,14 @@ p {
     flex-direction: column; /* Stack image and text vertically */
     justify-content: space-between; /* Center content vertically */
     align-items: center; /* Center content horizontally */
-    text-align: center;
+    text-align: start;
     border: 1px solid #ccc; /* Box border */
     width: 100%;
     border-radius: 8px; /* Rounded corners */
     margin: 15px 0; /* Spacing between boxes */
     transition: transform 0.2s; /* Animation on hover */
     box-sizing: border-box; /* Include padding/border in the element's total width */
-    padding: 10px; /* Adjust this value to reduce space inside the box */
+    padding: 0px; /* Adjust this value to reduce space inside the box */
 }
 
 .pr-box {
@@ -197,7 +202,7 @@ p {
     height: 100%; /* Ensure news boxes take full height */
     display: flex;
     flex-direction: column; /* Stack image and text vertically */
-    justify-content: space-between; /* Center content vertically */
+    justify-content:space-between; /* Center content vertically */
     align-items: center; /* Center content horizontally */
     text-align: center;
     border: 1px solid #ccc; /* Box border */
@@ -206,7 +211,7 @@ p {
     margin: 15px 0; /* Spacing between boxes */
     transition: transform 0.2s; /* Animation on hover */
     box-sizing: border-box; /* Include padding/border in the element's total width */
-    padding: 10px; /* Adjust this value to reduce space inside the box */
+    padding: 5px; /* Adjust this value to reduce space inside the box */
 
     position: relative;
     overflow: hidden; /* Hide overflow to keep the layout clean */
@@ -240,36 +245,46 @@ p {
 }
 
 .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     position: relative; /* Positioning context for the link */
-    height: 100%; /* Ensure it fills the pr-box */
+    height: 200px; /* Ensure it fills the pr-box */
     transition: transform 0.5s ease; /* Smooth image transition */
 }
 
 .pr-box:hover {
-    height: 200%; /* Increase height on hover */
-    transition: transform 0.3s ease;;
+    height: 100%; /* Increase height on hover */
+    transition: transform 0.3s ease;
+    transform: scale(1.025); /* Slightly enlarge on hover */
+    
 }
 
 .link-container {
     display: flex; /* Use flexbox */
     flex-direction: column; /* Stack links vertically */
     position: absolute; /* Keep it positioned over the image */
-    bottom: 10px; /* Position at the bottom */
+    bottom: 5px; /* Position at the bottom */
     left: 50%;
     width:100%;
     transform: translateX(-50%); /* Center the container */
     opacity: 0; /* Initially hidden */
     transition: opacity 0.3s ease; /* Smooth transition for container */
+    top: 210px;
 }
 
-.image-container:hover .link-container {
+.pr-box:hover .link-container {
     opacity: 1; /* Show links on hover */
 }
 
 .link {
     margin: 5px 0; /* Add margin between links */
     text-decoration: none; /* Style as needed */
-    color: white; /* Change text color */
+    color: #003300; /* Change text color */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+   
 }
 
 .pr-box:hover .link {
@@ -293,6 +308,18 @@ p {
 }
 
 .news-box p {
+    padding: 5px; /* Spacing inside the box */
+    margin: 0; /* Reset margin to remove additional space */
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 1.7vw;
+}
+
+.news-box date {
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1.25vw;
     padding: 5px; /* Spacing inside the box */
     margin: 0; /* Reset margin to remove additional space */
 }
@@ -326,12 +353,14 @@ footer{
 .carousel {
     position: relative;
     max-width: 100%; /* Adjust as needed */
-    margin:auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 100px;
     overflow: hidden;
-    background-color: #003300;
-    color: white;
+    background-color: whitesmoke;
+    color: #003300;
     text-align: center;
-    height:auto;
+    height:45vh;
 }
 
 .carousel-items {
@@ -339,7 +368,7 @@ footer{
     box-sizing: border-box;
     text-align: center;
     display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Center content vertically */
+    align-items: start; /* Center content vertically */
     transition: transform 0.5s ease;
 }
 
@@ -360,7 +389,8 @@ footer{
 
 .carousel-item img {
     width: 100%; /* Responsive images */
-    height: auto; /* Maintain aspect ratio */
+    height: 170px; /* Maintain aspect ratio */
+
 }
 
 button {
@@ -401,3 +431,66 @@ button {
 .hover-container:hover .hover-content {
     display: block; /* Show the content on hover */
 }
+
+.pr-box img{
+    max-width: 100%; /* Make images responsive */
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display:flex;
+    align-self: center;
+}
+
+
+
+#hamburger {
+    display: none; /* Hidden by default */
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 5;
+    color: white;
+}
+
+@media (max-width: 800px) {
+    nav {
+        display: none; /* Hide nav */
+    }
+
+    #hamburger {
+        
+        padding: 20px;
+        display: block; /* Show hamburger */
+    }
+
+    .nav-open {
+        display: block; /* Show nav when toggled */
+    }
+
+    #main-nav ul {
+        display: flex;
+        flex-direction: column; /* Vertical orientation */
+        position: absolute;
+        top: 70px; /* Adjust as needed */
+        background: #0050006e; /* Remove background color */
+        width: 200px; /* Full width */
+        padding: 0;
+        align-items: end;
+        right:0;
+        width: auto;
+    }
+
+    #main-nav li {
+        list-style: none;
+    }
+
+    #main-nav a {
+        color: white; /* Set text color to green */
+        text-decoration: none; /* Remove underline */
+        padding: 10px; /* Add some padding */
+        display: block; /* Make links block elements */
+    }
+
+    #main-nav a:hover {
+        background: rgb(75, 116, 75); /* Optional: add a hover effect */
+    }
+}
+

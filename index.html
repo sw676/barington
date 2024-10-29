@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="placeholder.png" type="image/x-icon">
-    <link rel="shortcut icon" href="placeholder.png" type="image/x-icon">
+    <link rel="shortcut icon" href="B icon.png" type="image/x-icon">
     <title>Barington</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,7 +30,7 @@
                 <a href="index.html" class="logo">
                     <img src="Barington White.img" alt="Overlay Image" class="overlay-image">
                 </a>
-                <nav>
+                <nav id="main-nav">
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
@@ -39,6 +39,26 @@
                         <li><a href="contact.html" class="button">Contact</a></li>
                     </ul>
                 </nav>
+
+                <div id="hamburger" class="hamburger" onclick="toggleNav()">
+                    &#9776; <!-- Hamburger icon -->
+                </div>
+                <script>
+                    function toggleNav() {
+                        const nav = document.getElementById('main-nav');
+                        nav.classList.toggle('nav-open');
+                    }
+                    // Close the nav if clicking outside of it
+                    document.addEventListener('click', function(event) {
+                        const nav = document.getElementById('main-nav');
+                        const hamburger = document.getElementById('hamburger');
+
+                        // Check if the click was outside the nav and hamburger
+                        if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
+                            nav.classList.remove('nav-open'); // Hide the nav
+                        }
+                    });
+                </script>
             </header>
             <p>Unlocking Value Through Strategic Activist Investment</p>
     </div>
@@ -46,7 +66,7 @@
     <!-- New About Us section -->
     <div class="about-us">
         <div class="scroll-text" id="scrollText">
-            <h2><a href="about.html"><h2>About Us</h2></a></li></h2>
+            <a href="about.html"><h2>About Us</h2></a></li>
         <hr class="styled-line">
             <p>At Barington Capital Group, L.P., we believe in the power of transformation. 
                 Founded in January 2000 by James A. Mitarotonda, we are value-oriented activist 
@@ -54,7 +74,7 @@
                 traded companies.</p>
             <p>Our team of experienced professionals employs a disciplined investment approach to identify opportunities for long-term growth.</p>
             
-            <div class="overlay1"></div>
+            
         </div>
         
     </div>
@@ -65,35 +85,35 @@
         <div class="decorative-box">
             <div id="scrollTextTeam" class="slide-in-text">
                 <div class="team-intro">
-                    <h2><a href="team.html">Our Team</a></h2>
+                    <a href="team.html"><h2>Our Team</h2></a>
                     <hr class="styled-line">
-                    <p>Meet the experienced professionals behind Barington, dedicated to driving value and strategic growth.</p>
+                    <a href="team.html"><p>Meet the experienced professionals behind Barington, dedicated to driving value and strategic growth.</p></a>
                 </div>
             </div>
             <ul>
                 <li>
-                    <a href="#James A. Mitarotonda">
+                    <a href="JamesMitarotonda.html">
                         <img src = "Profile Icon.jpg" alt="James A. Mitarotonda">
                     </a>
-                    <a href="#James A. Mitarotonda">James A. Mitarotonda</a></li>
+                    <a href="JamesMitarotonda.html">James A. Mitarotonda</a></li>
                 
                 <li>
-                    <a href="#Christopher J. Pappano">
+                    <a href="ChristopherPappano.html">
                         <img src = "Profile Icon.jpg" alt="Christopher J. Pappano">
                     </a>
-                    <a href="#Christopher J. Pappano">Christopher J. Pappano</a></li>
+                    <a href="ChristopherPappano.html">Christopher J. Pappano</a></li>
                 
                 <li>
-                    <a href="#Christopher J. Pappano">
-                        <img src = "Profile Icon.jpg" alt="Christopher J. Pappano">
+                    <a href="JosephSignorile.html">
+                        <img src = "Profile Icon.jpg" alt="Joseph Signorile CPA, MS">
                     </a>
-                    <a href="#Joseph Signorile CPA, MS">Joseph Signorile CPA, MS</a></li>
+                    <a href="JosephSignorile.html">Joseph Signorile CPA, MS</a></li>
                 
                 <li>
-                    <a href="#August 'Gus' Vlak">
+                    <a href="AugustVlak.html">
                         <img src = "Profile Icon.jpg" alt="August 'Gus' Vlak">
                     </a>
-                    <a href="#August 'Gus' Vlak">August "Gus" Vlak</a></li>
+                    <a href="AugustVlak.html">August "Gus" Vlak</a></li>
             </ul>
         </div>
         
@@ -183,17 +203,17 @@
 
     <!-- New News section -->
     <div class="news">
-        
-        <a-green href="news.html"><h2>News</h2></a-green>
+        <a href="news.html"><h2>News</h2></a>
+        <!--<h2><a href="news.html">News</a></h2>-->
         <hr class="styled-line">
-        <p>Stay updated with our latest announcements and insights into the market.</p>
+        <a href="news.html"><p>Stay updated with our latest announcements and insights into the market.</p></a>
     </div>
 
     <!-- New Contact section -->
     <div class="contact">
-        <h2>Contact Us</h2>
+        <a href="contact.html"><h2>Contact Us</h2></a>
         <hr class="styled-line">
-        <p>Get in touch with us to learn more about our investment strategies.</p>
+        <a href="contact.html"><p>Get in touch with us to learn more about our investment strategies.</p></a>
     </div>
 
     <footer>

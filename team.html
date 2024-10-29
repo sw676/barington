@@ -6,6 +6,7 @@
     <title>About Us</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="team.css">
+    <link rel="stylesheet" href="styleTest.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
@@ -17,7 +18,7 @@
                 <a href="index.html">
                     <img src="Barington White.img" alt="Overlay Image" class="overlay-image">
                 </a>
-                <nav>
+                <nav id="main-nav">
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
@@ -26,6 +27,28 @@
                         <li><a href="contact.html" class="button">Contact</a></li>
                     </ul>
                 </nav>
+
+                <div id="hamburger" class="hamburger" onclick="toggleNav()">
+                    &#9776; <!-- Hamburger icon -->
+                </div>
+                <script>
+                    function toggleNav() {
+                        const nav = document.getElementById('main-nav');
+                        nav.classList.toggle('nav-open');
+                    }
+                    // Close the nav if clicking outside of it
+                    document.addEventListener('click', function(event) {
+                        const nav = document.getElementById('main-nav');
+                        const hamburger = document.getElementById('hamburger');
+
+                        // Check if the click was outside the nav and hamburger
+                        if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
+                            nav.classList.remove('nav-open'); // Hide the nav
+                        }
+                    });
+                </script>
+
+
             </header>
         <h1>Our Team</h1>
         <p>At Barington Capital Group, our strength lies in our people. Our team of seasoned 

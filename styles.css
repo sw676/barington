@@ -1,11 +1,6 @@
 /* styles.css */
 
 
-
-a:hover {
-    color: #e20000;
-}
-
 .container {
     width: 80%;
     margin: auto;
@@ -45,7 +40,8 @@ video {
 
 .overlay {
     position: absolute; /* Position the overlay */
-    top: 637px;
+   
+    bottom:-8px;
     left: 0;
     width: 100%; /* Full width */
     height: 29vh; /* Full height */
@@ -99,7 +95,7 @@ video {
     top: 5%; /* Adjust as needed */
     left: 2%; /* Center horizontally */
     transform: translate(0%, 0%); /* Center adjustment */
-    width: 30 vw; /* Adjust width */
+    width: auto; /* Adjust width */
     height: auto; /* Maintain aspect ratio */
     z-index: 4; /* Ensure it's above the background */
     cursor: pointer; /* Changes cursor to indicate it's clickable */
@@ -152,7 +148,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0 1.5vw;
     white-space: nowrap; /* Prevent text from wrapping */
 }
 
@@ -187,11 +183,6 @@ a {
     text-decoration: none;
     font-weight: 1;
 }
-a-green {
-    color: #003300;
-    text-decoration: none;
-    font-weight: 1;
-}
 
 a:hover {
     color: #dbdbdb;
@@ -221,8 +212,9 @@ a:hover {
 .content p {
     margin-top: 25%; /* Adjust this value to move the text further down */
     align-items: center;
-    font-size: 77px;
+    font-size: 8vw;
     font-family: "Playfair Display", serif;
+    
 }
 
 .about-us {
@@ -253,7 +245,7 @@ a:hover {
     font-size: 25px; /* Adjust paragraph size */
     line-height: 1.5; /* Improve readability */
     font-family: "Montserrat", sans-serif;
-    font-weight: 100;
+    font-weight: 400;
 }
 
 .our-team {
@@ -288,6 +280,10 @@ a:hover {
     max-width: 100%; /* Make images responsive */
     width: auto;
     height: auto; /* Maintain aspect ratio */
+    margin-bottom: 15px;
+}
+.our-team img:hover {
+    transform: scale(1.1); 
 }
 
 .our-team ul li {
@@ -312,24 +308,42 @@ a:hover {
     z-index: 3; /* Ensure it's above the video and overlay */
     color:  #005700; /* Text color for contrast */
     text-align: center; /* Center the text */
-    padding: 200px; /* Add some padding */
+    padding: 20vw; /* Add some padding */
     background-color: rgb(255, 255, 255); /* Optional: background for readability */
     margin-top: 0px; /* Space between video and about section */
     font-family:'Playfair Display', serif;
 }
 
+.news a {
+    color: #005700;
+    text-decoration: none;
+    font-weight: 1;
+}
 
+.news a:hover {
+    color: #003300;
+}
 
 .contact {
     position: relative; /* Position relative to allow for spacing */
     z-index: 3; /* Ensure it's above the video and overlay */
     color:  #005700; /* Text color for contrast */
     text-align: center; /* Center the text */
-    padding: 200px; /* Add some padding */
+    padding: 20vw; /* Add some padding */
     background-color: rgb(255, 255, 255); /* Optional: background for readability */
     margin-top: 0px; /* Space between video and about section */
     font-family:'Playfair Display', serif;
     padding-bottom: 300px;
+}
+
+.contact a {
+    color: #005700;
+    text-decoration: none;
+    font-weight: 1;
+}
+
+.contact a:hover {
+    color: #003300;
 }
 
 footer {
@@ -341,7 +355,7 @@ footer {
     width: auto;
     font-size: 0.9em;
     font-family: "Playfair Display", serif;
-    color: #FFFFFF;
+
 }
 
 
@@ -355,6 +369,11 @@ p {
     position: relative;
     font-size: 25px; /* Adjust paragraph size */
     line-height: 1.5; /* Improve readability */
+    
+}
+
+footer p{
+    color: white;
 }
 
 .decorative-box {
@@ -483,5 +502,57 @@ p {
 
 h1 {
     margin-top: 0; /* Remove top margin for all h1 elements */
+}
+
+
+
+#hamburger {
+    display: none; /* Hidden by default */
+    font-size: 30px;
+    cursor: pointer;
+    
+}
+
+@media (max-width: 800px) {
+    nav {
+        display: none; /* Hide nav */
+    }
+
+    #hamburger {
+        padding: 20px;
+        display: block; /* Show hamburger */
+    }
+
+    .nav-open {
+        display: block; /* Show nav when toggled */
+    }
+
+    #main-nav ul {
+        display: flex;
+        flex-direction: column; /* Vertical orientation */
+        position: absolute;
+        top: 70px; /* Adjust as needed */
+        background: #0050006e; /* Remove background color */
+        width: 200px; /* Full width */
+        padding: 0;
+        align-items: end;
+        right:0;
+        width: auto;
+    }
+
+    #main-nav li {
+        list-style: none;
+    }
+
+    #main-nav a {
+        color: white; /* Set text color to green */
+        text-decoration: none; /* Remove underline */
+        padding: 10px; /* Add some padding */
+        display: block; /* Make links block elements */
+    }
+
+    #main-nav a:hover {
+        background: rgb(75, 116, 75); /* Optional: add a hover effect */
+    }
 }
 

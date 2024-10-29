@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="shortcut icon" href="B icon.png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
@@ -16,7 +17,7 @@
             <a href="index.html" class="logo">
                 <img src="Barington White.img" alt="Overlay Image" class="overlay-image">
             </a>
-            <nav>
+            <nav id="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
@@ -25,16 +26,37 @@
                     <li><a href="contact.html" class="button">Contact</a></li>
                 </ul>
             </nav>
+
+            <div id="hamburger" class="hamburger" onclick="toggleNav()">
+                &#9776; <!-- Hamburger icon -->
+            </div>
+            <script>
+                function toggleNav() {
+                    const nav = document.getElementById('main-nav');
+                    nav.classList.toggle('nav-open');
+                }
+                // Close the nav if clicking outside of it
+                document.addEventListener('click', function(event) {
+                    const nav = document.getElementById('main-nav');
+                    const hamburger = document.getElementById('hamburger');
+
+                    // Check if the click was outside the nav and hamburger
+                    if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
+                        nav.classList.remove('nav-open'); // Hide the nav
+                    }
+                });
+            </script>
         </header>
+        <div class="company">
+            <h1>TriMas Corporation</h1>
+           <div class="pdf-box">
+               <a href="TriMas Corporation - Press Release - July 28, 2024.pdf" target="_blank" rel="noopener noreferrer">TriMas Corporation - Press Release - July 28, 2024 (pdf)</a>
+           </div>
+           <div class="pdf-box">
+               <a href="TriMas Corporation - Letter to Chairman of the Board of Directors - July 28, 2024.pdf" target="_blank" rel="noopener noreferrer">TriMas Corporation - Letter to Chairman of the Board of Directors - July 28, 2024 (pdf)</a>
+           </div>    
+       </div>
     </div>
-    <div class="company">
-         <h1>TriMas Corporation</h1>
-        <div class="pdf-box">
-            <a href="TriMas Corporation - Press Release - July 28, 2024.pdf" target="_blank" rel="noopener noreferrer">TriMas Corporation - Press Release - July 28, 2024 (pdf)</a>
-        </div>
-        <div class="pdf-box">
-            <a href="TriMas Corporation - Letter to Chairman of the Board of Directors - July 28, 2024.pdf" target="_blank" rel="noopener noreferrer">TriMas Corporation - Letter to Chairman of the Board of Directors - July 28, 2024 (pdf)</a>
-        </div>    
-    </div>
+    
 </body>
 </html>

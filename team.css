@@ -1,15 +1,14 @@
 .profile-list {
     display: grid; /* Use grid for layout */
     grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    gap: 20px; /* Space between grid items */
+    gap: 50px; /* Space between grid items */
     padding: 0; /* Remove default padding */
-    margin: 5px; /* Remove default margin */
+    margin: 20px; /* Remove default margin */
 }
 
 .content-pages{
     background-color: #003300;
     padding: 20px;
-    height: 230vh;
     font-family: "Playfair Display", serif;
     font-size: 30px;
     color:white;
@@ -18,6 +17,7 @@
 
 h1{
     margin-top: 8vh;
+    margin-bottom: 8vh;
 }
 
 p{
@@ -34,6 +34,11 @@ p{
     padding: 10px; /* Padding inside the container */
     border-radius: 8px; /* Rounded corners */
     background-color: #003300; /* Background color */
+    transition: transform 0.5s; 
+}
+
+.profile-container:hover {
+    transform:scale(1.05);
 }
 
 .profile-image {
@@ -53,7 +58,7 @@ p{
 .profile-page-container {
     display: flex; /* Use flexbox for internal layout */
     flex-direction: row; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
+    align-items: start; /* Center items horizontally */
     /*border: 1px solid #ccc; /* Border around the profile */
     /*padding: 10px; /* Padding inside the container */
     border-radius: 8px; /* Rounded corners */
@@ -62,7 +67,7 @@ p{
 }
 
 .profile-page-image {
-    width: 50%; /* Set a fixed width for the image */
+    width: 40%; /* Set a fixed width for the image */
     height: auto; /* Set a fixed height for the image */
     border-radius: 7%; /* Circular image */
     object-fit: cover; /* Ensure the image covers the area without distortion */
@@ -74,8 +79,15 @@ p{
     flex-direction: column; /* Stack items vertically */
 }
 
+.bio p{
+    margin:20px;
+    margin-top: 0;
+    text-align: justify;
+}
+
 footer p{
     margin-top: 30px;
     margin-bottom: 30px;
     margin-left: 0;
+    color: white;
 }
