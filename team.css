@@ -1,9 +1,9 @@
 .profile-list {
     display: grid; /* Use grid for layout */
     grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    gap: 50px; /* Space between grid items */
+    gap: 5vw; /* Space between grid items */
     padding: 0; /* Remove default padding */
-    margin: 20px; /* Remove default margin */
+    margin: 2vw; /* Remove default margin */
 }
 
 .content-pages{
@@ -35,6 +35,7 @@ p{
     border-radius: 8px; /* Rounded corners */
     background-color: #003300; /* Background color */
     transition: transform 0.5s; 
+    width: 40vw;
 }
 
 .profile-container:hover {

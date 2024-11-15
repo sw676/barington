@@ -76,7 +76,22 @@
             
             
         </div>
-        
+        <script>
+            document.addEventListener('scroll', function() {
+                const scrollText = document.getElementById('scrollText');
+                const rect = scrollText.getBoundingClientRect();
+                
+                // Set your desired threshold (e.g., 0.1 for 10% of the viewport height)
+                const threshold = 0.1;  // 10% of the viewport height
+                
+                // Check if the top of the element is less than the threshold of the viewport height
+                if (rect.bottom < (window.innerHeight * threshold)) {
+                    scrollText.classList.add('visible'); // Make the element visible
+                } else {
+                    scrollText.classList.remove('visible'); // Remove visibility when out of view
+                }
+            });
+        </script>
     </div>
 
     <!-- New Our Team section -->
@@ -93,7 +108,7 @@
             <ul>
                 <li>
                     <a href="JamesMitarotonda.html">
-                        <img src = "Profile Icon.jpg" alt="James A. Mitarotonda">
+                        <img src = "James.jpg" alt="James A. Mitarotonda">
                     </a>
                     <a href="JamesMitarotonda.html">James A. Mitarotonda</a></li>
                 
@@ -105,7 +120,7 @@
                 
                 <li>
                     <a href="JosephSignorile.html">
-                        <img src = "Profile Icon.jpg" alt="Joseph Signorile CPA, MS">
+                        <img src = "Joseph.jfif" alt="Joseph Signorile CPA, MS">
                     </a>
                     <a href="JosephSignorile.html">Joseph Signorile CPA, MS</a></li>
                 
@@ -117,45 +132,30 @@
             </ul>
         </div>
         
-<!--
-        
-        <div class="decorative-box">
-            
-            <div id="scrollTextTeam" class="slide-in-text">
-                Sabrina Wang
-            </div>
-            
-            <div id="scrollText" class="slide-in-text">
-                <div class="team-intro">
-                    <h2><a href="team.html">Our Team</a></li></h2>
-                    <hr class="styled-line">
-                    <p>Meet the experienced professionals behind Barington, dedicated to driving value and strategic growth.</p>
-                </div>
-            </div>
--->
+
             <script>
                 document.addEventListener('scroll', function() {
-    const scrollText = document.getElementById('scrollText');
-    const scrollTextTeam = document.getElementById('scrollTextTeam');
-    const rectText = scrollText.getBoundingClientRect();
-    const rectTeam = scrollTextTeam.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
+                    const scrollText = document.getElementById('scrollText');
+                    const scrollTextTeam = document.getElementById('scrollTextTeam');
+                    const rectText = scrollText.getBoundingClientRect();
+                    const rectTeam = scrollTextTeam.getBoundingClientRect();
+                    const windowHeight = window.innerHeight;
+                    const t = .75;
 
-    // Check if the first element is in the viewport
-    if (rectText.top < windowHeight && rectText.bottom > 0) {
-        scrollText.classList.add('visible');
-    } else {
-        scrollText.classList.remove('visible');
-    }
+                    // Check if the first element is in the viewport
+                    if (rectText.top < (windowHeight*t) && rectText.bottom > 0) {
+                        scrollText.classList.add('visible');
+                    } else {
+                        scrollText.classList.remove('visible');
+                    }
 
-    // Check if the second element is in the viewport
-    if (rectTeam.top < windowHeight && rectTeam.bottom > 0) {
-        scrollTextTeam.classList.add('visible');
-    } else {
-        scrollTextTeam.classList.remove('visible');
-    }
-});
-
+                    // Check if the second element is in the viewport
+                    if (rectTeam.top < (windowHeight*t) && rectTeam.bottom > 0) {
+                        scrollTextTeam.classList.add('visible');
+                    } else {
+                        scrollTextTeam.classList.remove('visible');
+                    }
+                });
 
                 // Optional: Initialize visible class on load if it's already in the viewport
                 window.addEventListener('load', function() {
@@ -163,7 +163,7 @@
                     const rect = scrollText.getBoundingClientRect();
                     const windowHeight = window.innerHeight;
 
-                    if (rect.top < windowHeight && rect.bottom > 0) {
+                    if (rect.top < (windowHeight*t) && rect.bottom > 0) {
                         scrollText.classList.add('visible');
                     }
                 });
@@ -200,18 +200,6 @@
 
 </body>
 
-<script>
-    document.addEventListener('scroll', function() {
-        const scrollText = document.getElementById('scrollText');
-        const rect = scrollText.getBoundingClientRect();
 
-        // Check if the bottom of the text is above the viewport
-        if (rect.bottom < window.innerHeight) {
-            scrollText.classList.add('visible'); // Add class to make it visible
-        } else {
-            scrollText.classList.remove('visible'); // Remove class when out of view
-        }
-    });
-</script>
 
 </html>

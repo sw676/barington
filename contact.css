@@ -8,7 +8,7 @@
 
 .img-contact {
     width: 100%; /* Make the image responsive */
-    height: 70%; /* Maintain aspect ratio */
+    height: 70vh; /* Maintain aspect ratio */
     position: absolute; /* Position the image behind */
     top: 0;
     left: 0;
@@ -60,11 +60,11 @@ h1{
     font-family: "Playfair Display", serif;
     font-size: 75px;
     margin-left: 30px;
-    margin-top: 37vh;
+    margin-top: calc(70vh - 275px);
 }
 
 .content p{
-    margin-top:0;
+    top:10%;
     font-size: 3vw;
     color: #003300;
     text-align: start;
