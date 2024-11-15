@@ -13,7 +13,7 @@ body{
 
 .img-contact {
     width: 100%; /* Make the image responsive */
-    height: 70%; /* Maintain aspect ratio */
+    height: 70vh; /* Maintain aspect ratio */
     position: absolute; /* Position the image behind */
     top: 0;
     left: 0;
@@ -39,7 +39,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    height: 70%;
+    height: 70vh;
     background-color: rgba(58, 58, 58, 0.562); /* Adjust the color and opacity here */
     z-index: 0; /* Ensure it appears above the image */
 }
@@ -49,8 +49,8 @@ h3 {
     position: relative;
     font-size: 75px; /* Adjust heading size */
     margin-bottom: 50px; /* Space below the heading */
-    margin-top: 40vh;
-    color:rgba(196, 196, 196, 0.877);
+    margin-top: calc(70vh - 280px);
+    color:white;
     text-align: start;
 }
 
@@ -68,7 +68,7 @@ h4 {
 h2{
     text-align: start;
     margin-top: 20px;
-    color: rgba(72, 172, 72, 0.753);
+    color: rgba(91, 199, 91, 0.555);
     font-size: 3.5vw;
 }
 
@@ -119,7 +119,7 @@ h2{
 }
 
 p{
-  color: green;  
+  color: rgb(218, 218, 218);  
   text-align: start;
   margin-top: 15px;
   margin-bottom: 25px;
