@@ -45,7 +45,7 @@ video {
     left: 0;
     width: 100%; /* Full width */
     height: 30vh; /* Full height */
-    background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 33, 0));;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgb(33, 0, 23));;
     /*background-color: linear-gradient(rgb(0, 0, 0,0.37), rgb(255, 255, 255,0.037));*/
     /*background-color: rgba(0, 0, 0, 0.37); /* Dark overlay */
     z-index: 3; /* Ensure overlay is above the background */
@@ -102,6 +102,18 @@ video {
     cursor: pointer; /* Changes cursor to indicate it's clickable */
     margin-top: 20px; 
 
+}
+
+.footer-image {
+    position: absolute; /* Position over the background */
+    top: 5%; /* Adjust as needed */
+    left: 2%; /* Center horizontally */
+    transform: translate(0%, 0%); /* Center adjustment */
+    width: 20vw; /* Adjust width */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 4; /* Ensure it's above the background */
+    cursor: pointer; /* Changes cursor to indicate it's clickable */
+    margin-top: 20px; 
 }
 
 .logo {
@@ -243,7 +255,7 @@ footer .button{
 }
 
 .about-us p {
-    font-size: 25px; /* Adjust paragraph size */
+    font-size: 2vw; /* Adjust paragraph size */
     line-height: 1.5; /* Improve readability */
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
@@ -403,7 +415,7 @@ footer {
     width: auto;
     font-size: 2vw;
     font-family: "Playfair Display", serif;
-    height: 200px;
+    height: 18vw;
 }
 
 
@@ -421,9 +433,11 @@ p {
 }
 
 footer p{
+    left: 10px;
     color: white;
     font-size: 2vw;
-    top: 100px;
+    top: 9vw;
+    margin: -2px;
 }
 
 
