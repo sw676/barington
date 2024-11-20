@@ -4,6 +4,7 @@
     gap: 5vw; /* Space between grid items */
     padding: 0; /* Remove default padding */
     margin: 2vw; /* Remove default margin */
+    width: 100%;
 }
 
 .content-pages{
@@ -21,9 +22,8 @@ h1{
 }
 
 p{
-    margin-bottom: 10vh;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-bottom: 5px;
+    text-align: start;
 }
 
 .profile-container {
@@ -87,8 +87,13 @@ p{
 }
 
 footer p{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: 0;
+    top-margin: 0px;
     color: white;
 }
+
+.float-image {
+    float: left; /* You can also use 'right' to float the image on the right */
+    margin-right: 25px; /* Adds some space between the image and text */
+    margin-bottom: 1.5px; /* Adds space below the image */
+    width: 40%;
+  }

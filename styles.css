@@ -10,7 +10,6 @@
 body, html {
     margin: 0;
     padding: 0;
-    height: 100%;
     font-weight:100;
 }
 
@@ -310,7 +309,7 @@ footer .button{
     text-decoration: none;
     list-style-type: none;
     font-weight: 1;
-    font-size: 1.7vw;
+    font-size: calc(15px + 0.5vw);
     display: flex;
     flex-direction: column; /* Arrange children in a column */
     justify-content: start; /* Center items vertically */
@@ -404,7 +403,7 @@ footer {
     width: auto;
     font-size: 2vw;
     font-family: "Playfair Display", serif;
-
+    height: 200px;
 }
 
 
@@ -424,6 +423,7 @@ p {
 footer p{
     color: white;
     font-size: 2vw;
+    top: 100px;
 }
 
 

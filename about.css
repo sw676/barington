@@ -47,7 +47,7 @@ body{
 
 h3 {
     position: relative;
-    font-size: 75px; /* Adjust heading size */
+    font-size: 8vw; /* Adjust heading size */
     margin-bottom: 50px; /* Space below the heading */
     margin-top: calc(70vh - 280px);
     color:white;
@@ -61,7 +61,7 @@ h4 {
     margin-top: 100px;
     color: #030;
     text-align: center;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 400;
 }
 
