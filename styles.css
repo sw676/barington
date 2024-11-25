@@ -106,14 +106,14 @@ video {
 
 .footer-image {
     position: absolute; /* Position over the background */
-    top: 5%; /* Adjust as needed */
-    left: 2%; /* Center horizontally */
+    /*top: 5%; /* Adjust as needed */
+    /*left: 2%; /* Center horizontally */
     transform: translate(0%, 0%); /* Center adjustment */
     width: 20vw; /* Adjust width */
     height: auto; /* Maintain aspect ratio */
     z-index: 4; /* Ensure it's above the background */
     cursor: pointer; /* Changes cursor to indicate it's clickable */
-    margin-top: 20px; 
+    /*margin-top: 20px; */
 }
 
 .logo {
